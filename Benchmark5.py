@@ -81,7 +81,7 @@ def get_MonteCarlo(examples, validation_size):
     x4 = examples['x4'].numpy()
     mean = np.empty(validation_size, dtype=float)
     stdv = np.empty(validation_size, dtype=float)
-    sample_size = 32
+    sample_size = 1024
     for i in range(validation_size):
         sample = get_Sample(x0[i], x1[i], x2[i], x3[i], x4[i], sample_size)
         mean[i] = sample.mean()
